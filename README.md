@@ -1,2 +1,2 @@
-# Twitch
-Twitch Bots
+# Discord
+Discord Bots
