@@ -5,7 +5,7 @@ import os
 import discord
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(dotenv_path='../EnvTokens/.env')
 TOKEN = os.getenv("DISCORD_TOKEN")
 GUILD = os.getenv("DISCORD_GUILD")
 
