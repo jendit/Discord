@@ -1,21 +1,18 @@
+# bot.py
+import os
+
 import discord
+from dotenv import load_dotenv
+
+load_dotenv()
+token = os.getenv('DISCORD_TOKEN')
+
+client = discord.Client()
 
 
-class MyClient(discord.Client):
-    async def on_ready(self):
-        print('Logged in as')
-        print(self.user.name)
-        print(self.user.id)
-        print('------')
-
-    async def on_message(self, message):
-        # we do not want the bot to reply to itself
-        if message.author.id == self.user.id:
-            return
-
-        if message.content.startswith('!hello'):
-            await message.channel.send('Hello {0.author.mention}'.format(message))
+@client.event
+async def on_ready():
+    print(f'{client.user} has connected to Discord!')
 
 
-client = MyClient()
-client.run('NTkwNDA2MTk2NTA3MzEyMTI4.XQj0PA.bONe8mQuxFpsSJMN9nWfN9FYZ2g')
+client.run(token)
