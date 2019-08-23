@@ -1,4 +1,10 @@
-# bot.py
+"""
+JokeBot
+The bot tells jokes to the user if asked for.
+Default it will show PyJoke jokes.
+Alternatively it can tell Chuck Norris programming jokes as well.
+"""
+
 import os
 import pyjokes
 import discord
