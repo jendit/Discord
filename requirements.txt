@@ -1,0 +1,8 @@
+dotenv
+discord
+certifi==2019.6.16
+chardet==3.0.4
+idna==2.8
+pyjokes==0.5.0
+requests==2.22.0
+urllib3==1.25.3
