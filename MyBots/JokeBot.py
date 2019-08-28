@@ -11,6 +11,7 @@ import discord
 
 from dotenv import load_dotenv
 from discord.ext import commands
+import Web.MonkeyUser
 
 load_dotenv(dotenv_path='../EnvTokens/.env')
 TOKEN = os.getenv("DISCORD_TOKEN")
@@ -42,5 +43,11 @@ async def chuck(ctx):
     response = pyjokes.get_joke('en', 'chuck')
     await ctx.send(response)
 
+
+@bot.command(name='monkey', help='Provides the latest comic from monkeyuser.com')
+async def monkey(ctx):
+    my_monkey = Web.MonkeyUser.MonkeyUser()
+    response = my_monkey.get_latest_comic()
+    await ctx.send(response)
 
 bot.run(TOKEN)
