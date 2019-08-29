@@ -6,15 +6,13 @@ Alternatively it can tell Chuck Norris programming jokes as well.
 """
 
 import os
-import sys
 
 import discord
 import pyjokes
 from discord.ext import commands
 from dotenv import load_dotenv
 
-sys.path.append('../')
-import Web.MonkeyUser
+import MonkeyUser
 
 load_dotenv(dotenv_path='../EnvTokens/.env')
 TOKEN = os.getenv("DISCORD_TOKEN")
@@ -49,14 +47,14 @@ async def chuck(ctx):
 
 @bot.command(name='monkey', help='Provides the latest comic from monkeyuser.com')
 async def monkey(ctx):
-    my_monkey = Web.MonkeyUser.MonkeyUser()
+    my_monkey = MonkeyUser.MonkeyUser()
     response = my_monkey.get_latest_comic()
     await ctx.send(response)
 
 
 @bot.command(name='monkey_random', help='Provides a random comic from monkeyuser.com')
 async def monkey(ctx):
-    my_monkey = Web.MonkeyUser.MonkeyUser()
+    my_monkey = MonkeyUser.MonkeyUser()
     response = my_monkey.get_random_comic()
     await ctx.send(response)
 
