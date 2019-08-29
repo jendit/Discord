@@ -6,12 +6,14 @@ Alternatively it can tell Chuck Norris programming jokes as well.
 """
 
 import os
+import sys
 
 import discord
 import pyjokes
 from discord.ext import commands
 from dotenv import load_dotenv
 
+sys.path.append('../')
 import Web.MonkeyUser
 
 load_dotenv(dotenv_path='../EnvTokens/.env')

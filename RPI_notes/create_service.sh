@@ -1,14 +1,14 @@
 #Create the service file
-sudo touch /etc/systemd/system/pybot.service
+sudo touch /etc/systemd/system/jokebot.servicebot.service
 
 #Edit the service file, adding the contents of pybot.service here
-sudo nano /etc/systemd/system/pybot.service
+sudo vim /etc/systemd/system/jokebot.service
 
 #Enable the service (this will cause it to start on boot)
-sudo systemctl enable pybot
+sudo systemctl enable jokebot
 
 #Start the service so it starts running now
-sudo service pybot start
+sudo service jokebot start
 
 #If you make a change to your code, restart the service so the changes are picked up
-sudo service pybot restart
+sudo service jokebot restart
