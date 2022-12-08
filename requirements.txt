@@ -1,7 +1,7 @@
 beautifulsoup4
 python-dotenv
 discord
-certifi==2019.6.16
+certifi==2022.12.7
 chardet==3.0.4
 idna==2.8
 pyjokes==0.5.0
